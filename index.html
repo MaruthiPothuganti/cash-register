@@ -14,9 +14,11 @@
 
     <div class="container">
         <h1>Cash Register</h1>
-
+        <p>Enter the Bill Amount and Cash given by customer to calculate Amount of Change to be returned.</p>
+        <label for="bill-amount">Bill Amount: </label><br>
         <input type="text" id="bill-amount" placeholder="Enter the Bill Amount" onkeyup="enableDisable()">
         <br>
+        <!-- <label for="cash-given">Cash Given: </label> -->
         <input type="text" id="cash-given" placeholder="Enter the Cash given" hidden>
         <br>
         <button id="btn-change">CALCULATE</button>
