@@ -15,9 +15,8 @@ buttonReturn.addEventListener("click", function amountValidation() {
             calculateReturnChange(changeAmount);
             message.innerText = "The amount to be returned as change is ₹" + changeAmount;
             message.style.display = "block";
-        }
-        if (cashGiven.value < billAmount.value) {
-            showMessage("Given Money isnt Sufficient");
+        } else {
+            showMessage("Given Money is not Sufficient");
         }
 
     } else {
