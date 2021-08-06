@@ -7,16 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="Assets/coins.svg" type="image/x-icon">
     <title>Cash Register</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+
     <div class="container">
         <h1>Cash Register</h1>
 
-        <input type="text" id="bill-amount" placeholder="Enter the Bill Amount">
-
-        <input type="text" id="cash-given" placeholder="Enter the Cash given">
+        <input type="text" id="bill-amount" placeholder="Enter the Bill Amount" onkeyup="enableDisable()">
+        <br>
+        <input type="text" id="cash-given" placeholder="Enter the Cash given" hidden>
+        <br>
         <button id="btn-change">CALCULATE</button>
+
         <p id="errorMessage"></p>
         <table>
             <tr>
@@ -33,7 +37,7 @@
             </tr>
             <tr>
 
-                <th>No of Notes to be Returned</th>
+                <th>No of <br>Notes to be<br> Returned</th>
                 <td class="returnNotes"></td>
                 <td class="returnNotes"></td>
                 <td class="returnNotes"></td>
