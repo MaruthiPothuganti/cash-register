@@ -9,7 +9,7 @@ var notesAvailable = [2000, 500, 100, 50, 20, 10, 5, 1];
 
 buttonReturn.addEventListener("click", function amountValidation() {
     message.style.display = "none";
-    if (Number(billAmount.value) > 0) {
+    if (Number(billAmount.value) > 0 && Number(cashGiven.value) > 0) {
         if (Number(cashGiven.value) > Number(billAmount.value)) {
             var changeAmount = cashGiven.value - billAmount.value;
             calculateReturnChange(changeAmount);
@@ -17,7 +17,7 @@ buttonReturn.addEventListener("click", function amountValidation() {
             message.style.display = "block";
         } else if (Number(cashGiven.value) === Number(billAmount.value)) {
             showMessage("No change to be Returned, its settled👍");
-        } else {
+        } else if (Number(cashGiven.value) < Number(billAmount.value) && Number(cashGiven.value) > 0) {
             showMessage("Given Money is not Sufficient. Ab Chintu Barthan Doyega😂🤣");
         }
 
